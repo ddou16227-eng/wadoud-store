@@ -5,210 +5,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WADOUD STORE</title>
-
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#101010;
+  color:white;
 }
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: white;
+header{
+  background:#d90020;
+  padding:25px;
+  text-align:center;
 }
-
-header {
-  background: #151515;
-  border-bottom: 3px solid red;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header h1{margin:0;font-size:32px}
+header p{margin-bottom:0}
+nav{
+  background:#1c1c1c;
+  padding:15px;
+  text-align:center;
 }
-
-.logo {
-  font-size: 25px;
-  font-weight: bold;
+nav a{color:white;text-decoration:none;margin:12px}
+.hero{text-align:center;padding:35px 15px}
+.hero h2{color:#ff263e}
+.products{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:20px;
 }
-
-.logo span {
-  color: red;
+.card{
+  background:#202020;
+  border:1px solid #444;
+  border-radius:15px;
+  width:290px;
+  overflow:hidden;
+  text-align:center;
+  padding-bottom:20px;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 10px;
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
-
-.hero {
-  text-align: center;
-  padding: 75px 20px;
-  background: linear-gradient(120deg, #350000, #111);
+.card h3{padding:0 10px}
+.price{
+  color:#ff354b;
+  font-size:23px;
+  font-weight:bold;
 }
-
-.hero h1 {
-  font-size: 40px;
+button{
+  background:#e00025;
+  color:white;
+  border:0;
+  padding:12px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
 }
-
-.hero span {
-  color: red;
-}
-
-.hero p {
-  color: #ccc;
-  line-height: 1.8;
-}
-
-button {
-  background: red;
-  color: white;
-  border: none;
-  padding: 13px 22px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-section {
-  padding: 35px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  border-right: 4px solid red;
-  padding-right: 12px;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #191919;
-  padding: 18px;
-  border: 1px solid #333;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.card .image {
-  font-size: 55px;
-  padding: 20px;
-}
-
-.card h3 {
-  color: white;
-}
-
-.price {
-  color: #ff3333;
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.card button {
-  width: 100%;
-  margin-top: 12px;
-}
-
-footer {
-  background: #151515;
-  padding: 25px;
-  text-align: center;
-  color: #aaa;
-  border-top: 2px solid red;
-}
-
-@media(max-width:600px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .hero h1 {
-    font-size: 30px;
-  }
+button:hover{background:#ff2445}
+footer{
+  margin-top:40px;
+  padding:25px;
+  text-align:center;
+  background:#1b1b1b;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">WADOUD <span>STORE</span></div>
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#products">المنتجات</a>
-    <a href="#contact">اتصل بنا</a>
-  </nav>
+  <h1>WADOUD STORE</h1>
+  <p>متجرك للألعاب الرقمية</p>
 </header>
 
-<div class="hero" id="home">
-  <h1>مرحبا بك في <span>WADOUD STORE</span></h1>
-  <p>أفضل الألعاب والمنتجات الرقمية في مكان واحد</p>
-  <a href="#products">
-    <button>تصفح المنتجات</button>
-  </a>
-</div>
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#products">المنتجات</a>
+  <a href="#contact">اتصل بنا</a>
+</nav>
 
-<section id="products">
-  <h2>منتجاتنا</h2>
+<section class="hero" id="home">
+  <h2>مرحبا بك في WADOUD STORE</h2>
+  <p>اكتشف منتجاتنا الرقمية واطلب بسهولة</p>
+</section>
 
-  <div class="products">
+<section class="products" id="products">
 
-    <div class="card">
-      <div class="image">🎮</div>
-      <h3>Steam Game 1</h3>
-      <p>لعبة رقمية</p>
-      <div class="price">1500 DZD</div>
-      <button onclick="order('Steam Game 1')">
-        اطلب الآن
-      </button>
-    </div>
-
-    <div class="card">
-      <div class="image">🕹️</div>
-      <h3>Steam Game 2</h3>
-      <p>لعبة رقمية</p>
-      <div class="price">2000 DZD</div>
-      <button onclick="order('Steam Game 2')">
-        اطلب الآن
-      </button>
-    </div>
-
-    <div class="card">
-      <div class="image">💻</div>
-      <h3>Digital Product</h3>
-      <p>منتج رقمي</p>
-      <div class="price">1000 DZD</div>
-      <button onclick="order('Digital Product')">
-        اطلب الآن
-      </button>
-    </div>
-
+  <div class="card">
+    <img src="fc27.jpg" alt="EA SPORTS FC 27">
+    <h3>EA SPORTS FC™ 27</h3>
+    <p>مفتاح لعبة رقمي من مصدر مرخّص</p>
+    <p class="price">3500 دج</p>
+    <button onclick="order()">اطلب عبر Instagram</button>
   </div>
+
 </section>
 
-<section id="contact">
-  <h2>تواصل معنا</h2>
-  <p>للطلب والاستفسار تواصل معنا عبر Instagram</p>
-  <a href="https://www.instagram.com/rer62033/">
-    <button>Instagram</button>
-  </a>
-</section>
-
-<footer>
-  © 2026 WADOUD STORE
+<footer id="contact">
+  <h3>WADOUD STORE</h3>
+  <p>شكرا لزيارتكم ❤️</p>
+  <p>الطلبات عبر Instagram</p>
 </footer>
 
 <script>
-function order(product) {
-  const message = "سلام، حاب نطلب: " + product;
-  alert(message + "\nتواصل معنا عبر Instagram");
+function order(){
   window.open(
     "https://www.instagram.com/rer62033/",
     "_blank"
